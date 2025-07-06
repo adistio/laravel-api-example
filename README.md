@@ -51,15 +51,7 @@ DB_PASSWORD=secret
 php artisan key:generate
 ```
 
-### 6. Install Sanctum & Jalankan Migrasi + Seeder
-```bash
-composer require laravel/sanctum
-```
-
-```bash
-php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-```
-
+### 6. Jalankan Migrasi + Seeder
 ```bash
 php artisan migrate --seed
 ```
