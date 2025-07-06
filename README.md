@@ -66,12 +66,13 @@ Response JSON
 }
 
 ### 📡 Endpoint CRUD User
-Method	Endpoint	Auth
-GET	/api/users	❌
-GET	/api/users/{id}	✅
-POST /api/users	✅
-PUT	/api/users/{id}	✅
-DELETE /api/users/{id}	✅
+| Method | Endpoint          | Auth |
+| ------ | ----------------- | ---- |
+| GET    | `/api/users`      | ❌    |
+| GET    | `/api/users/{id}` | ✅    |
+| POST   | `/api/users`      | ✅    |
+| PUT    | `/api/users/{id}` | ✅    |
+| DELETE | `/api/users/{id}` | ✅    |
 
 - Untuk endpoint yang membutuhkan autentikasi kirimkan header:
 Authorization: Bearer your_api_token
