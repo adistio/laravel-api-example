@@ -36,38 +36,55 @@ cp .env.example .env
 
 ### 4. Konfigurasi Database
 Edit file .env sesuai koneksi lokalmu, contoh:
+
+```bash
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=secret
+```
 
 ### 5. Generate App Key
+```bash
 php artisan key:generate
+```
 
 ### 6. Install Sanctum & Jalankan Migrasi + Seeder
+```bash
 composer require laravel/sanctum
+```
 
+```bash
 php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+```
 
+```bash
 php artisan migrate --seed
+```
 
 ### 🔐 Login API
 - Endpoint
 
+```bash
 POST /api/login
+```
 
+```bash
 Request JSON
 {
   "email": "admin@crunchflux.com",
   "password": "crunchflux"
 }
+```
 
+```bash
 Response JSON
 {
   "token": "your_api_token"
 }
+```
 
 ### 📡 Endpoint CRUD User
 | Method | Endpoint          | Auth |
@@ -85,9 +102,11 @@ Authorization: Bearer your_api_token
 User dummy otomatis dibuat saat menjalankan:
 php artisan migrate --seed
 
+```bash
 Detail akun:
 Email: admin@crunchflux.com
 Password: crunchflux
+```
 
 ### 🧪 Tes API
 Gunakan tools seperti:
