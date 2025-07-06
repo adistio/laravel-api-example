@@ -48,12 +48,16 @@ php artisan key:generate
 
 ### 6. Install Sanctum & Jalankan Migrasi + Seeder
 composer require laravel/sanctum
+
 php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
 php artisan migrate --seed
 
 ### 🔐 Login API
 - Endpoint
+
 POST /api/login
+
 Request JSON
 {
   "email": "admin@crunchflux.com",
